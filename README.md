@@ -1,4 +1,14 @@
 # Projeto Biomédica Unisanta
 This project is an interdisciplinary one, with the goal of expanding knowledges and also contributing with society with the subjects learnt in this semester.
 
-The Main goal is to create a Web Progressive App that is capable of comunicating with a ESP32 module, and recognizing text from the camera feed. And converting it to voice, to help people with vision impairments.
+The Main goal is to create a Progressive Web App that is capable of communicating with an ESP32 used to get camera feed, then process this camera feed in the application, and speak to the user.
+
+The current libraries and materials being used are:
+<ul>
+    <li>ESP32</li>
+    <li>OV240 Camera Module</li>
+    <li>Arduino Uno</li>
+    <li>Tesseract.js</li>
+</ul>
+
+We want to make the best out of this project so if you have any suggestion please let me know ❤️.
