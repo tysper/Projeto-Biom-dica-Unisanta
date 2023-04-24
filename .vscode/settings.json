@@ -1,0 +1,9 @@
+{  
+"liveServer.settings.https":   
+    {
+    "enable": true, //set it true to enable the feature.  
+    "cert": "C:\\Users\\pedro\\Desktop\\WebRTC-Application\\.vscode\\certificate.pem", //full path of the certificate  
+    "key": "C:\\Users\\pedro\\Desktop\\WebRTC-Application\\.vscode\\key.pem", //full path of the private key  
+    "passphrase": ""  
+    }  
+}

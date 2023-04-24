@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@200;400;500;600&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@200;400;500;600&display=swap');
 :root {
     --main-color: #766be8;
 }
@@ -11,33 +11,62 @@
 }
 
 body {
-    width: 100vw;
+    /* min-width: 100%; */
     height: 100vh;
     font-family: 'Martian Mono', monospace;
     font-size: 62.5%;
     overflow: hidden;
 }
 
+.btn {
+    padding: 1em 2em;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 20px;
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+    transition: all ease 0.2s;
+    font-size: 1.4em;
+}
+
+.btn:hover {
+    box-shadow: 0 0 20px 8px rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: scale(1.0);
+    box-shadow: 0 0 20px 2px rgba(255, 255, 255, 0.2);
+}
+
+.section {
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+}
+
 /* Main Container */
 
 .container--main {
-    width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    width: 100%;
+    /* overflow: hidden; */
+    display: flex;
+    transition: transform ease-out 0.5s;
+    
 }
-
 
 /* Section 1 -> Logo Section */
 .section--1 {
-    width: 100vw;
-    height: 100vh;
     background-color: var(--main-color);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.container--logo {
+.section--1 > .container--logo {
     width: 70%;
     height: 5em;
     display: flex;
@@ -46,8 +75,8 @@ body {
     position: relative;
 }
 
-.container--icon,
-.container--text {
+.section--1 .container--icon,
+.section--1 .container--text {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,7 +84,7 @@ body {
     flex-grow: 1;
 }
 
-.container--icon-arrow {
+.section--1 .container--icon-arrow {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -63,32 +92,119 @@ body {
     height: 100%;
 }
 
-.container--text {
+.section--1 .container--text {
     /* flex-direction: column; */
     display: flex;
     justify-content: flex-end;
 }
 
-.logo {
+.section--1 .logo {
     width: 70%;
     height: 70%;
 }
 
-.logo--icon-2 {
+.section--1 .logo--icon-2 {
     position: absolute;
 }
 
-.logo-text {
+.section--1 .logo-text {
     width: 70%;
 }
 
-.hidden {
-    display: none;
+.section--1 .btn--start {
+    position: absolute;
+    bottom: 20%;
+    transform: scale(0);
+    filter: opacity(0);
 }
 
+/* Section 2 -> Permissions */
+
+.section--2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+}
+
+.section--2 .container--icon {
+    width: 28%;
+    /* margin-bottom: 4em; */
+}
+
+.section--2 .container--icon .svg--icon {
+    fill: black;   
+}
+
+.section--2 > .container--text {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+.section--2 .title--text {
+    font-size: 2em;
+    color: black;
+    font-weight: 600;
+    margin-bottom: 1em;
+    display: inline-block;
+    align-self: center;
+}
+
+.section--2 .container--text p {
+    margin-bottom: 0.8em;
+    font-size: 1.3em;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+.section--2 .container--text ul {
+    margin-left: 1.5em;
+    letter-spacing: 1px;
+    font-size: 1.3em;
+    display: inline-block;
+}
+
+.section--2 .container--text li {
+    margin-bottom: 0.25em;
+}
+
+.section--2 .container--btn .btn--allow {
+    font-size: 1.4em;
+    border: 2px solid black;
+    color: black;
+}
+
+.section--2 .btn--allow:hover {
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+}
+
+.section--2 .btn--allow:active {
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 300px) {
+    .container--logo {
+        width: 80%;
+    }
+}
 @media screen and (min-width: 500px) {
     .container--logo {
         width: 30em !important;
     }
     
+}
+.hidden {
+    display: none !important;
 }
