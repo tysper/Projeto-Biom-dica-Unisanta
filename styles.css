@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@200;400;500;600&display=swap');
+
+:root {
+    --main-color: #766be8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Martian Mono', monospace;
+    font-size: 62.5%;
+    overflow: hidden;
+}
+
+/* Main Container */
+
+.container--main {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+/* Section 1 -> Logo Section */
+.section--1 {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container--logo {
+    width: 70%;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    position: relative;
+}
+
+.container--icon,
+.container--text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-grow: 1;
+}
+
+.container--icon-arrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+}
+
+.container--text {
+    /* flex-direction: column; */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.logo {
+    width: 70%;
+    height: 70%;
+}
+
+.logo--icon-2 {
+    position: absolute;
+}
+
+.logo-text {
+    width: 70%;
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (min-width: 500px) {
+    .container--logo {
+        width: 30em !important;
+    }
+    
+}
