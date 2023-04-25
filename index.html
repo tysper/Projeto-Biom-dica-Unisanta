@@ -8,6 +8,21 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <script src="./scripts/initial.js" defer></script>
     <script src="./scripts/tesseract.min.js" defer></script>
+    <script src="./scripts/instascan.min.js"></script>
+    <script src="./scripts/qr-scanner.umd.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <style class="pseudo--styles">
+        .section--3 .container--camera::after {
+            position: absolute;
+            content: "";
+            top: 5%;
+            left: 5%;
+            width: 90%;
+            height: 90%;
+            background-image: url("../images/qr_placeholder.svg");
+            background-size: contain;
+        }
+    </style>
 </head>
 <body>
     <div class="container container--main">
@@ -33,12 +48,12 @@
                 <svg class="svg svg--icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3h58.3c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24V250.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1H222.6c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg>
             </div>
             <div class="container container--text">
-                <h2 class="title title--text">Antes de começar...</h2>
-                <p class="content content--text">Precisamos de sua autorização para os seguintes recursos: </p>
+                <h2 class="text title title--text">Antes de começar...</h2>
+                <p class="text content content--text">Precisamos de sua autorização para os seguintes recursos: </p>
                 <ul class="content content--list">
-                    <li>Câmera</li>
-                    <li>Cookies</li>
-                    <li>Auto-Falantes</li>
+                    <li class="text">Câmera</li>
+                    <li class="text">Cookies</li>
+                    <li class="text">Auto-Falantes</li>
                 </ul>
             </div>
             <div class="container container--btn">
@@ -47,13 +62,27 @@
         </section>
         <section class="section section--3">
             <div class="container container--title">
-                <h2 class="title title--text">Agora aponte a câmera para o QR Code:</h2>
+                <h2 class="text title title--text">Leia o QR Code:</h2>
+                <!-- <span>Ele está localizado no verso de seu dispositivo.</span> -->
             </div>
-            <div class="container container--camera">
-                <video class="video video--feed" playsinline></video>
+            <div id="video--feed" class="container container--camera">
+                <video  class="video video--feed" playsinline></video>
+                <lottie-player class="animation animation--checkmark" src="https://assets6.lottiefiles.com/packages/lf20_gmXXlb.json"  background="transparent"></lottie-player>
             </div>
             <div class="container container--message">
-                <span class="message--display">Messagem aqui....</span>
+                <span class="text message--display">Messagem aqui....</span>
+            </div>
+            <div class="container container--credentials hidden">
+                <div class="content content--credentials">
+                    <h2 class="text title title--content">Conecte-se à essas credenciais</h2>
+                    <div class="container container--info">
+                        <p class="text text--ssid">WIFI:</p>
+                        <div class="text fake-input text--ssid-display">Exemplo de Rede</div>
+                        <p class="text text--password">SENHA:</p>
+                        <div class="text fake-input text--password-display">123456789 <button class="btn--clipboard"></button></div>
+                    </div>
+                    <button class="btn btn--done">Feito</button>
+                </div>
             </div>
         </section>
     </div>

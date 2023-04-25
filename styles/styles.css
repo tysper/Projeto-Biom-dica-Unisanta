@@ -16,6 +16,7 @@ body {
     font-family: 'Martian Mono', monospace;
     font-size: 62.5%;
     overflow: hidden;
+    /* margin-top: -5em; */
 }
 
 .btn {
@@ -46,6 +47,7 @@ body {
     height: 100vh;
     flex-shrink: 0;
     overflow: hidden;
+    padding-bottom: 6em;
 }
 
 .title--text {
@@ -144,6 +146,10 @@ body {
     gap: 4em;
 }
 
+.section--2 .container {
+    max-width: 80%;
+}
+
 .section--2 .container--icon {
     width: 28%;
     /* margin-bottom: 4em; */
@@ -184,6 +190,10 @@ body {
     justify-content: center;
 }
 
+.section--2 .container--text ul li:first-child {
+    list-style: none;
+}
+
 .section--2 .container--text li {
     margin-bottom: 0.25em;
 }
@@ -210,36 +220,36 @@ body {
     justify-content: center;
     align-items: center;
     gap: 4em;
+    position: relative;
 }
 
 .section--3 .container {
     width: 30em;
 }
 
+
+.section--3 .title--text {
+    letter-spacing: -2px;
+    line-height: 1.5;
+}
+
 .section--3 .container--camera {
     width: 30em;
     height: 30em;
     background-color: rgb(34, 34, 34);
-    /* border-radius: 20px; */
     position: relative;
+    transition: border-radius ease-out 1s, background-color ease-out 0.3s;
 }
 
-.section--3 .container--camera::after {
-    position: absolute;
-    content: "";
-    top: 5%;
-    left: 5%;
-    width: 90%;
-    height: 90%;
-    background-image: url("../images/qr_placeholder.svg");
-    background-size: contain;
-}
 
 .section--3 .container--message {
     font-size: 1.2em;
     width: 30em;
+    max-height: 1em;
     display: flex;
     justify-content: center;
+    font-weight: 600;
+    letter-spacing: 2px;
 }
 
 
@@ -249,12 +259,110 @@ body {
     object-fit: cover;
 }
 
+.section--3 .animation--checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
 
+.section--3 .animation--checkmark * {
+    transition: opacity ease 0.3s;
+}
+.section--3 .text {
+    transition: filter 0.3s ease-out;
+}
 
+.section--3 .container--credentials {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all ease 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+}
 
+.section--3 .content--credentials {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40em;
+    height: 40em;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 50px 10px rgba(0,0,0,0.2);
+    gap: 0.8em;
+    padding: 4em;
+}
 
+.section--3 .title {
+    font-size: 1.6em;
+    letter-spacing: -1px;
+}
+
+.section--3 .container--info {
+    width: 100%;
+}
+
+.section--3 .container--info .text {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.section--3 .fake-input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(180,180,180,0.5);
+    position: relative;
+}
+
+.section--3 .btn--clipboard {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background-color: transparent;
+    background-image: url("../images/copy.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 0;
+    height: 20px;
+    width: 20px;
+    filter: invert(70%);
+    transition: transform ease 0.3s;
+}
+
+.section--3 .btn--clipboard:active {
+    transform: scale(0.8); 
+}
+
+.section--3 div .fake-input {
+    color: rgba(0,0,0,0.5);
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.section--3 .btn--done {
+    background-color: var(--main-color);
+    border: none;
+}
+
+.section--3 .btn--done {
+    trasnform: scale(0.8);
+}
 
 @media screen and (max-width: 415px) {
+    body {
+        font-size: 50%;
+    }
+
     .container--logo {
         width: 80%;
     }
