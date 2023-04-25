@@ -7,8 +7,8 @@ const canvas1 = document.createElement("canvas");
 const canvas2 = document.createElement("canvas");
 [canvas1, canvas2].forEach(c => c.height = qrHeight);
 [canvas1, canvas2].forEach(c => c.width = qrWidth);
-const ctx1 = canvas1.getContext("2d");
-const ctx2 = canvas2.getContext("2d");
+const ctx1 = canvas1.getContext("2d", {willReadFrequently: true});
+const ctx2 = canvas2.getContext("2d", {willReadFrequently: true});
 let count = 0;
 let motionTimer;
 
