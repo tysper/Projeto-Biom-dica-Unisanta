@@ -109,14 +109,14 @@ function animation() {
                                                                     if(opacity === 1) {
                                                                         function nextSection() {
                                                                             setSection(2);
-                                                                            speech = new SpeechSynthesisUtterance('hello');
+                                                                            speech = new SpeechSynthesisUtterance('he');
                                                                             speech.volume = 0;
                                                                             speechSynthesis.speak(speech);
                                                                         }
                                                                         btnStart.addEventListener("mousedown", nextSection);
                                                                         btnStart.addEventListener("touchend", nextSection);
                                                                         const script = document.createElement("script");
-                                                                        script.src = "./section2.js";
+                                                                        script.src = "./scripts/section2.js";
                                                                         script.setAttribute("defer", "");
                                                                         header.appendChild(script);
                                                                         clearInterval(animationTimer);

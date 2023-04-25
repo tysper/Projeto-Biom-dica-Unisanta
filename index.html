@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BioNexus</title>
-    <link rel="stylesheet" href="./styles.css">
-    <script src="./initial.js" defer></script>
-    <script src="./tesseract.min.js" defer></script>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./scripts/initial.js" defer></script>
+    <script src="./scripts/tesseract.min.js" defer></script>
 </head>
 <body>
     <div class="container container--main">
@@ -43,6 +43,17 @@
             </div>
             <div class="container container--btn">
                 <button class="btn btn--allow">Autorizar</button>
+            </div>
+        </section>
+        <section class="section section--3">
+            <div class="container container--title">
+                <h2 class="title title--text">Agora aponte a câmera para o QR Code:</h2>
+            </div>
+            <div class="container container--camera">
+                <video class="video video--feed" playsinline></video>
+            </div>
+            <div class="container container--message">
+                <span class="message--display">Messagem aqui....</span>
             </div>
         </section>
     </div>
